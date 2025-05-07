@@ -85,12 +85,27 @@ Ans:
 
 **A company needs high availability and disaster recovery. Which cloud deployment model suits them best? Justify.**
 
+Hybrid cloud model:
+
+- public can have a recovery backup system
+- distributed computation resources over both a private and cloud system ensures very high availability even if one fails
+- Critical operations stay on the private cloud due to it been very secure 
 
 ### Comparison:
 
-****
+**Differentiate between public, private, and hybrid clouds with advantages and disadvantages.**
 
-****
+<img src="resources/pub_priv_hyb.png">
+
+**Compare cloud computing and grid computing. Which is better for a data-intensive task and why?**
+
+Cloud computing is generally better for data-intensive tasks due to:
+- Elastic Storage
+- High throughput and low latency
+- Build in data processing tools
+- Fault tolerance and high availability
+
+<img src="resources/cloud_grid.png">
 
 ## Unit 2:
 
