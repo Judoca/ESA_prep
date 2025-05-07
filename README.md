@@ -78,6 +78,11 @@ Ans:
 
 **Given a scenario where a startup is launching a new web app, recommend a suitable cloud service model and justify your choice.**
 
+- Paas model provides a ready to use environment with pre-configured OSes.
+- It gives a faster time to market, ideal for startups
+- Cost efficient as it has a pay as you go model
+- It is scalable as traffic grows.
+
 **A company needs high availability and disaster recovery. Which cloud deployment model suits them best? Justify.**
 
 
