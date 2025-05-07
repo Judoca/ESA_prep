@@ -197,19 +197,56 @@ Ans:
 
 **1) Compare file storage, block storage, and object storage with examples.**
 
+| **Aspect**            | **File Storage**                              | **Block Storage**                               | **Object Storage**                                  |
+| --------------------- | --------------------------------------------- | ----------------------------------------------- | --------------------------------------------------- |
+| **Data Organization** | Hierarchical (files in folders/directories)   | Divides data into fixed-size blocks             | Data stored as discrete objects with metadata       |
+| **Access Method**     | File path and name                            | Through block ID                                | Using unique object ID and metadata                 |
+| **Performance**       | Good for shared access and structured data    | High performance for transactional data         | Optimized for massive unstructured data storage     |
+| **Scalability**       | Moderate (limited by file system constraints) | Moderate to high                                | Highly scalable                                     |
+| **Use Case**          | File sharing, document management, NFS, SMB   | Databases, VMs, applications requiring fast I/O | Backup, media storage, big data, web content        |
+| **Examples**          | Network Attached Storage (NAS), Google Drive  | SAN (Storage Area Network), Amazon EBS          | Amazon S3, Azure Blob Storage, Google Cloud Storage |
+
+
+Summary:
+
+- File Storage is ideal for traditional file-based applications.
+
+- Block Storage is best for databases and performance-intensive workloads.
+
+- Object Storage is most suitable for storing large volumes of unstructured data with rich metadata.
 
 
 **2) Define RAID and explain RAID 0 and RAID 1 configurations.**
 
-
+- Redundant Array of Independent Disks is a data storrage virtualization technology that combines multiple physical drives and merges it into one logical unit
+- The goal of RAID is to improve performance, storage capacity and reliable
+- RAID 0:
+    - spilts data across two or more drives
+    - faster read write speeds cause parallel
+    - no fault tolerance
+- RAID 1:
+    - mirrors data across 2 or more drives.
+    - high fault tolerance
+    - storage capacity is halved
 
 **3) What is storage virtualization? List its types.**
+
+- the prcoess of abstracting physical resources from multiple devices into a single, manageable virtual storage tool
+- more flexible, efficient and scalable while being hardware independent
+- Types:
+    - File level: Abstracts file system for applications
+    - Distributed: file system spread across multiple servers
+    - block level: multiple disks into a single logical disk and stored as data blocks
+    - host-based: Utilizes a Logical Volume Manager LVM to create a storage pool from multiple disks
+    - Storage device: creates virtual volumes within subsystems
+    - Network based: stored over the network and connected storage to client
+    - Object storage: organises data as objects in a falt namespace
 
 ### Diagrams
 
 **1) Explain the architecture of a cloud storage service with a labelled diagram.**
 
-
+    
 
 **2) Illustrate how Logical Volume Manager (LVM) supports storage virtualization.**
 
@@ -234,3 +271,4 @@ Ans:
 
 
 ## Unit 4:
+
