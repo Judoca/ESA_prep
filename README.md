@@ -193,6 +193,44 @@ Ans:
 
 ## Unit 3:
 
+### Conceptual Questions
+
+**1) Compare file storage, block storage, and object storage with examples.**
+
+
+
+**2) Define RAID and explain RAID 0 and RAID 1 configurations.**
+
+
+
+**3) What is storage virtualization? List its types.**
+
+### Diagrams
+
+**1) Explain the architecture of a cloud storage service with a labelled diagram.**
+
+
+
+**2) Illustrate how Logical Volume Manager (LVM) supports storage virtualization.**
+
+### Application
+
+**1) How does thin provisioning help optimize storage utilization?**
+
+
+
+**2) Discuss the pros and cons of cloud storage from the user’s perspective.**
+
+
+
+### Comparison/Analysis
+
+**1) Discuss differences between DAS, NAS, and SAN with advantages.**
+
+
+
+**2) Compare centralized vs distributed file systems and their metadata handling.**
+
 
 
 ## Unit 4:
