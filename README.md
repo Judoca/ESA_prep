@@ -39,17 +39,40 @@
 
 **1) Discuss how cloud computing enables elasticity and scalability in enterprise applications.**
 
+- Elasticity: Cloud computing ensures that it is able to expand as well as shrink its resource capacity on demand.
+- Scalability: Cloud Computing ensures scalability by ensuring the ability to adapt quicly to changing demands while still remaining cost effective.
+
 **2) Explain how virtualization plays a role in cloud computing. Use examples.**
 
+- Virtualization is the process of abstracting physical resources in order to manage, organise and allocate efficiently across multiple services and systems.
+- It enables services to be run machine indendent.
+- It enables the system to be flexible and maintain a high utilization and isolation.
+- Ex: Hypervisors like KVM, VMware Worskstation, Virtualbox.
+
 **3) Identify challenges in adopting cloud computing in an enterprise setting. How can they be mitigated?**
+
+- security: may be mitigated by deplying a private cloud, but may increase cost
+- cost: pay on demand where resources are only billed when required
+- management of resources and computationly power are made simpler and more efficient.
+- vendor lock in: migrating between cloud platforms may be difficult hence the enterprise might need to only lock in on one vendor to prevent migration
 
 ### Diagram/Process Oriented Questions:
 
 **Draw and explain the layered architecture of cloud computing.**
 
-**Illustrate the architecture of a virtual machine monitor (VMM) and explain its role.**
+Ans:
 
-**Explain the working of a hypervisor and its types with diagrams.**
+<img src="resources/cloud_archi.png">
+
+<br>
+
+**Explain the role of a virtual machine monitor (VMM)**
+
+- resources abstraction and allocation
+- isolation between VMs
+- Control of priviliged instruction
+- efficient resource utilization
+- VM lifecycle management
 
 ### Case/Scenario Based:
 
