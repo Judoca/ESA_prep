@@ -2,11 +2,50 @@
 
 ## Unit 1:
 
+### Conceptual Questions:
+
+**1) Explain the essential characteristics of cloud computing**
+
+
+
+**2) Compare and contrast IaaS, PaaS, and SaaS with suitable examples.**
+
+**3) Describe the service models and deployment models in cloud computing.**
+
+### Application-based Questions:
+
+**Discuss how cloud computing enables elasticity and scalability in enterprise applications.**
+
+**Explain how virtualization plays a role in cloud computing. Use examples.**
+
+**Identify challenges in adopting cloud computing in an enterprise setting. How can they be mitigated?**
+
+### Diagram/Process Oriented Questions:
+
+**Draw and explain the layered architecture of cloud computing.**
+
+**Illustrate the architecture of a virtual machine monitor (VMM) and explain its role.**
+
+**Explain the working of a hypervisor and its types with diagrams.**
+
+### Case/Scenario Based:
+
+**Given a scenario where a startup is launching a new web app, recommend a suitable cloud service model and justify your choice.**
+
+**A company needs high availability and disaster recovery. Which cloud deployment model suits them best? Justify.**
+
+
+### Comparison:
+
+****
+
+****
+
 ## Unit 2:
 
 ### Conceptual Questions:
 
-1) Explain the concept of virtualization and its significance in cloud computing.
+**1) Explain the concept of virtualization and its significance in cloud computing.**
 
 Ans:
 
@@ -16,7 +55,7 @@ Ans:
 - It enables VMs which allow efficient management of compute resources.
 - The logical representation of resources allows for better resource allocation and management.
 
-2) Differentiate between Type 1 and Type 2 hypervisors with examples.
+**2) Differentiate between Type 1 and Type 2 hypervisors with examples.**
 
 Ans:
 
@@ -41,7 +80,7 @@ Ans:
 - Easy to use
 - Example: VMware Workstation, Virtualbox
 
-3) What are the requirements of a Virtual Machine Monitor (VMM)?
+**3) What are the requirements of a Virtual Machine Monitor (VMM)?**
 
 Ans:
 
@@ -53,7 +92,7 @@ Ans:
 
 ### Scenario-Based:
 
-1) Suppose you are deploying VMs for different OSs on the same physical hardware. Which virtualization technique will you use and why?
+**1) Suppose you are deploying VMs for different OSs on the same physical hardware. Which virtualization technique will you use and why?**
 
 - We will use Full Virtualization using a hypervisor of type 1
 - Full virtualization is the complete virtualization of physical resources which allows guest OSs to run independently of each other as it removes the need for harware dependence.
@@ -62,7 +101,7 @@ Ans:
 
 ### Analytical:
 
-1) Compare full virtualization and paravirtualization with pros and cons.
+**1) Compare full virtualization and paravirtualization with pros and cons.**
 
 **Full Virtualization**
 
@@ -78,7 +117,7 @@ Ans:
 - Higher performance due to less overhead
 - Example: KVM
 
-2) Explain how paravirtualization handles memory management with reference to Xen.
+**2) Explain how paravirtualization handles memory management with reference to Xen.**
 
 - In paravirtualiztion the VM is provided with a software interface that is similar to the underlying hardware which requires the OS to be modified in order to run.
 - In Xen, in order for the VM to modify the page table, it first generates a trap, which makes the page table temporary writable.
@@ -87,5 +126,7 @@ Ans:
 - It uses virtual-to-physical mapping with the hypervisor in order to manage memory efficiently.
 
 ## Unit 3:
+
+
 
 ## Unit 4:
