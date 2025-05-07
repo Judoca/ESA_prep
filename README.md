@@ -6,19 +6,42 @@
 
 **1) Explain the essential characteristics of cloud computing**
 
-
+- CC delivers cumputing resources at the internet scale, providing services and access to a pool of on-demand shared resources.
+- On demand self service
+- Broad network access, accecssible from various devices an locations
+- Resources are pooled so serve multiple users
+- saves cost  by giving resources on demand
 
 **2) Compare and contrast IaaS, PaaS, and SaaS with suitable examples.**
 
+<img src="resources/iaas_paas_saas.png">
+
 **3) Describe the service models and deployment models in cloud computing.**
+
+- Iaas:
+    - Provides the hardware resources
+    - User controls OS, storage
+
+- Paas:
+    - Provides platform to deploy apps and services
+    - User controls the apps and configuration
+
+- Saas:
+    - Provides the full deployed software
+    - User only operates the app
+
+- Deployment models:
+    - private - in house infrastructure (secure)
+    - public - infrastructure open to all
+    - hybrid - mix of public and private
 
 ### Application-based Questions:
 
-**Discuss how cloud computing enables elasticity and scalability in enterprise applications.**
+**1) Discuss how cloud computing enables elasticity and scalability in enterprise applications.**
 
-**Explain how virtualization plays a role in cloud computing. Use examples.**
+**2) Explain how virtualization plays a role in cloud computing. Use examples.**
 
-**Identify challenges in adopting cloud computing in an enterprise setting. How can they be mitigated?**
+**3) Identify challenges in adopting cloud computing in an enterprise setting. How can they be mitigated?**
 
 ### Diagram/Process Oriented Questions:
 
