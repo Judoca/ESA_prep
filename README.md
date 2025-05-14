@@ -176,3 +176,15 @@ A' → β1 | β2 | ... | βn
 
 ## Unit 3:
 
+### Intermediate code generation:
+
+- L-attributed SDDs used
+- High level or low level
+
+### TAC:
+
+- one operator on the right hand side
+- instructions include upto three addresses: identifies, constants ot temporaries
+- instruction formats:
+
+<img src="resources/tac.png">
