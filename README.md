@@ -124,3 +124,55 @@ A' → β1 | β2 | ... | βn
 
 ## Unit 2:
 
+### Bottom up parsing:
+
+- from leaves to the start symbol
+- aka shift reduce parsing
+- LR parsing: left to right, rightmost derivation
+- LR parsers handle grammars that are left recursive and not left factored
+- identify substrings that match grammar and replace with non-terminals
+
+- do with stack table
+
+### Key concepts in bottom up parsing:
+
+- shift-reduce parsing: parser shifts input symbols to the stackand reduces them to non terminals based on rules
+- conflict resolution: conflicts appear when the parser needs to choose between shifting and reducing, resolved using lookahead tokens
+- LR parsing: does not require the productions to be left factored and can have left recursion
+- SLR parsing: uses follow sets to determine when to reduce
+- LR(1) parsing: extension of SLR to prevent conflicts using one lookahead
+
+### LALR Parsing:
+
+- Look Ahead LR: more efficient for certain grammars but less powerful than LR(1)
+- shift reduce conflicts avoided
+- reduce reduce conflicts are present
+
+### YACC:
+
+- .y -> y.tab.c, y.tab.h
+
+- contains the grammar
+
+
+### Syntax directed translation: SDT
+
+- develops syntax based on CFGs
+- actions embedded in the productions
+
+### Syntax Directied definitions: SDD
+
+- define the semnatics of the programming language
+
+### S-attributes and L-attributes:
+
+- SDD is S-attributed if every attribute is synthesized, making it suitable for bottom up parsing
+- S can be too restrictive
+<br>
+
+- L-attributed allow for inherited attributes with specific rules
+- evaluated in a single left  to right pass of the parse tree
+<hr>
+
+## Unit 3:
+
