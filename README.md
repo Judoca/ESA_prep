@@ -1,190 +1,130 @@
-# CD notes:
+# DT notes:
 
 ## Unit 1:
 
-### Phases of a compiler:
+### Applications of AR:
 
-- Lexical analysis: scanning. breaking down source code into tokens. Lexeme matcher. Tokenisation <br>
+- Industry and construction:
+    - to visualize, plan and train
+    - real time simulations of physical assets
+- Medical applications:
+    - overlay critical information to the surgeons view, improving precision and outcomes
+    - training simulations
+- E commerce and Marketing:
+    - Visualize products in their own environment before purchase
+    - enriches the experience for marketing
 
-- Syntax analysis: parsing, checks source code against grammatical rules of the language. Grammatical correctness. <br> Parse Tree vs. Syntax Tree: A parse tree is a concrete representation that retains all information from the input, while a syntax tree is an abstract representation focusing only on the necessary structure for code generation. <br>
+### OpenGL:
 
-- Semnatic analysis: veries statements in the code make sense in the context of the languages rules
+- used to render 2D and 3D objects
 
-- intermediate code generator: TAC. Bridge between high level and low level
-- machine independent code optimizer: optimises intermediate code
-- code generator: assembly or machine code
-- machine dependent code optimizer
+- rendering pipline:
+    - programmable stages of the pipeline are called shaders used for custom rendering effects
+- primitives are the basiuc building blocks for rendering graphics
+    - effects performance and ease of use
 
-### Compiler variants:
+### Digital Twin and Extended reality:
 
-- Self hosting: compile their own source code, compiler may be built with different language
-- native compiler: generate code fo the same platform they are run on
-- cross compilers: create executable code for different platforms
+- refers to a digital replica of a physical object, allowing real time monitoring and simulation
+- Extended reality (XR) encompasses AR, VR and mixed reality MR
+- graphics effect the quality
 
-### Phases of a compiler:
+### Graphics Pipeline Architecture:
 
-- single pass: all phases in one go
-- 2 pass: analysis and sysnthsis seperate
-    - analysis: front end, understanding the source code
-    - systhesis: backend, generates the target machine code
+- sequence of steps that tranform 3D objects to 2D images
+    - vertex processing: each vertex is tranformed and colored for the next stage
+    - clipping and primitive assembly: objects outside the view are clipped, remaining vertices are assembled into primitives
+    - rasterization: converts primitives into fragments, determining which pixels are covered by each primitive
+    - fragment processing: updates the frame buffer with color and depth information, applying effects like texture mapping
 
-### Syntac analysis:
+- **Vertex processing**
+    - 1st stage, each vertex processed individually which allows for parallel processing
+    - coordinate transforamations and color computations for each vertex
+    - Output: set of tranformed vertices for next stage
 
-- parse tree
-- recursive predictive parsing: uses a lookahead token to identify which grammar rule to use next
+- **Clipping and primitive assembly**
+    - 2nd stage, remove objects that are outide the cameras field of view, only visible parts are processed
+    - done by primitive-by-primitive basis, reduces number of calculations needed for invisible objects
+    - Output: set of primitives whose projections appear in the image ready for rasterization
 
-### Symbol Table:
+- **Rasterization**
+    - also called scan conversion
+    - 3rd stage, where the rasterizer determines which pixels in the frame buffer correspond to the primitives being rendered
+    - each pixel that is affected by the primitive is updated with fragment information such as color and depth data
+    - depth ensures that fragments behind other fragments are not rendered on top
+    - Output: set of fragments for each primitive
 
-- data structure that maintains records for each variable including attributes such as type, scope and storage allocation
-- used during all stages of compilation
-- supports multiple declarations of the same identifier
-- errors related: undeclarations, mismatch in type, scope
-- managed using hashing and or tree structures
+- **Fragment Processing**
+    - final stage, fragments are processed to update the frame buffer
+    - operations like: texture mapping and blending
+    - not all fragments will be visible due to occlusion -> depth testing performed to find out which should be visible
 
-### Constucting the symbol table:
 
-- 3 operations: lookup insert and delete
-- implemented using linear lists or hash tables
+### Geometric concepts in 3D space:
 
-- Linear lists: simple to implement but inefficient when large
-- Hash tables: provide better performance for lookups and insetions at the cost of increased complexity and space overhead
+- scalars: single values that represent magnitude
+- vectros: represent magnitude and direction
 
-Example:
+- polygons:
+    - multisided planar element that consists of vertices and edges
+    - must not intersect (simple), convex (all interior angles less that 180), and flat (all vertices lie on the same plane)
+    - triangulation is the process of diving polygons into triangles, which are the only primitives supported in modern OpenGL
 
-<img src="resources/symboltable.png">
+### Concecpts of data flow in systems:
 
-### Challenges in scanning:
+- Throughput: the rate of data flow through a system - how much data can be processed in a given time frame
+- Latency: the time it takes a single data to travel to the system
+- increase in the pipeline stages can increase latency and decrease throughput
 
-- Syntactic sugar: code made easier to read. shortcuts that the compiler may need to expand
-- Handling white spaces
-- Overloaded operators
-- keywords used as identifiers
-- scope management
 
-### Context free grammar:
+### Abstract Data Types ADTs:
 
-CFG defined by (V, T, P, S)
-- V = variables (non-terminals)
-- T = terminals
-- P = productions
-- S = start variable
+- theoretical concept that define a data type by its behavior from the point of view of the user, specifically the operations that can be performed on it
+- allow for the seperation of interface and implementation, focus on what operations are available in stead of how they are implemented
+- lists, stacks, queues, trees
 
-### Semantic Analysis:
+### Affine Transformations:
 
-- type checking: operations are performed on compatible types
-- scope resolution: scope is correct
+- Affine space allows for the addition of vectors and points, as well as scalar multiplication of vectors, but not the addition of 2 points directly
+- P = Q + alpha(R - Q)  ->  Q and R = points;   alpha = scalar
+<br>
+- Barycentric coorinates:
+    - provide a way to express a point T in relation to points P, Q and R in the same plane
+    - T(alpha, beta, gamma) = alpahP + betaQ + gammaR
+    - useful in graphics for interpolation and rendering techniques
 
-- Abstract Syntax tree:
-    - abstacts syntax details and focuses on logical structure of the code
+### Vector Opertaions:
 
-### Left recursive grammars:
+- dot product: u.v = |u||v|cos(theta);  theta = angle between u and v vectors
+- if u.v = 0; vectors are orthogonal, right angle between them
+<br>
+- cross product: results in a vector that is orthogonal to the plane formed by the original vectors, useful to calculate normals
+<br>
+- both products used to analyze forces and motion
 
-- left recursive if it has a non terminal A such that it can derive itself forming an infinite loop
-- step to remove:
+### Homogeneous Coordinates and Transforms:
 
-A -> Aa | b
+- allow for the representation of points and vectors in a 4D space, facilitating transformations using matrix operations
+- tranformations in homogeneous can be complex, requiring tranformations for every point in a line segment
 
-A -> bR
-R -> aR | null
+### Rigid and Non-rigid transformations:
 
-### Grammar trnasformations:
+- Rigid body transformations: include rotation and translation, preserve shape and volume of the object, do not alter geometry
+- Non-rigid: scaling, resize the object, can be uniform or non-uniform. Have 6 degrees of freedom, independent scaling factors in different direcections
+<br>
+- Shear:
+    - shearing tranformations represented by a sheer matrix alter shape of the objects without changing its area
+- Concatenation:
+    - Concatenations of transformations is where matrices A B and C can be arbitrary 4x4 matrices, optimizing transforms for multiple points
 
-- Eliminating left recursion:
-    - see above
+### Quaternions:
 
-- Left factoring grammar:
-    - make it suitable for top down parsing by ensuring that the parser can make decisions based on the next input token
-    - identify the longest common prefix 
-
-A → α β1 | α β2 | ... | α βn | γ 
-
-A → α A' | γ
-A' → β1 | β2 | ... | βn
-
-### Error handling:
-
-- panic mode recovery: parser discards symbols until it finds a delimiter, prevents infinte loops
-- parse level recovery: allows for logical corrections by inserting or replacing tokens for the parser to continue
-- error productions: anticipates common errors by augmenting the grammar with error constructs
-- global corrections: make minimal changes to the input string to correct errors but it costly in terms of time and space and is primary theoretical
-
-### Predictive parsing and LL(1) Parsers:
-
-- LL(1): needs to be free of left recursion, left factored
-- uses a single lookahead token to make parsing decisions
-- First(A): first terminals that can appear in strings derived from A
-- Follow(A): set of strings that can appear immediately after A
-
-### Error recovery in LL(1):
-
-- error should provide a meaningful message
-- panic mode recovery
+- complex numbers: operations related to 2D geometry mainly rotation
+- quaternions extend complex numbers to 3D rotations
+    - one real part and 3 imaginary parts
+    - visualized as points in a 4D hypersphere
 
 <hr>
 
 ## Unit 2:
 
-### Bottom up parsing:
-
-- from leaves to the start symbol
-- aka shift reduce parsing
-- LR parsing: left to right, rightmost derivation
-- LR parsers handle grammars that are left recursive and not left factored
-- identify substrings that match grammar and replace with non-terminals
-
-- do with stack table
-
-### Key concepts in bottom up parsing:
-
-- shift-reduce parsing: parser shifts input symbols to the stackand reduces them to non terminals based on rules
-- conflict resolution: conflicts appear when the parser needs to choose between shifting and reducing, resolved using lookahead tokens
-- LR parsing: does not require the productions to be left factored and can have left recursion
-- SLR parsing: uses follow sets to determine when to reduce
-- LR(1) parsing: extension of SLR to prevent conflicts using one lookahead
-
-### LALR Parsing:
-
-- Look Ahead LR: more efficient for certain grammars but less powerful than LR(1)
-- shift reduce conflicts avoided
-- reduce reduce conflicts are present
-
-### YACC:
-
-- .y -> y.tab.c, y.tab.h
-
-- contains the grammar
-
-
-### Syntax directed translation: SDT
-
-- develops syntax based on CFGs
-- actions embedded in the productions
-
-### Syntax Directied definitions: SDD
-
-- define the semnatics of the programming language
-
-### S-attributes and L-attributes:
-
-- SDD is S-attributed if every attribute is synthesized, making it suitable for bottom up parsing
-- S can be too restrictive
-<br>
-
-- L-attributed allow for inherited attributes with specific rules
-- evaluated in a single left  to right pass of the parse tree
-<hr>
-
-## Unit 3:
-
-### Intermediate code generation:
-
-- L-attributed SDDs used
-- High level or low level
-
-### TAC:
-
-- one operator on the right hand side
-- instructions include upto three addresses: identifies, constants ot temporaries
-- instruction formats:
-
-<img src="resources/tac.png">
