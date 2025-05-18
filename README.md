@@ -272,3 +272,107 @@ Unit 4: https://github.com/Judoca/ESA_prep?tab=readme-ov-file#unit-4 <br>
 <hr>
 
 ## Unit 3:
+
+### Simulation:
+
+- imitation of real world systems operation over time, allowing for experimentation without real world consequences
+- understand and analyze complex systems and their interactions
+- enable testing of various changes and its effects on the system
+- learnings from simulations may lead to enhancements in system performance and efficiency
+<br>
+
+- not needed when a problem can be solved with resources that are already available
+- direct experiments may be more cost effective
+
+### Advantages and disadvantages of simulation:
+
+- Adv: allows to test new policies without disrupting real systems, saving resources
+- Disadv: building simulation models require expertise, results hard to interpret and the process can be time-consuming and costly
+
+### Tools of simulation:
+
+- MATLAB/Simulink: Mathematical modelling and simulation
+- FlexSim: modelling complex systems in various industries
+- OpenModelica: open source modeling and simulation environment
+
+### Areas of Application:
+
+- Manufacturing: bottleneck detection, automated model development
+- Healthcare: improve hospital performance and modeling inventory
+- Military: logisitcs distribution
+
+### Systems:
+
+- group of interacting objects that work together to perform a common goal
+- system boundaries: external factors that affect the systems operation
+- components of a system:
+    - entities: objects of interest
+    - attributes: properties of entities
+    - activities: time based procedures
+<br>
+
+- State variables:
+    - describe the system at a specific point in time
+    - events trigger change in state variables
+<br>
+
+- Response time calculation: Clock time - Arrival time
+
+### Classification of Systems:
+
+- Discrete vs continuous:
+    - discrete: state variables cahnge at specific intervals
+    - continuous: state variables change continously
+
+- types of models:
+    - physical
+    - mathematical
+    - simulation
+    - static vs dynamic
+    - deterministics vs stochastic
+
+### Simulation process and benefits:
+
+- four phases: problem formulation, model building, running the model, implementation
+<br>
+
+- benefits:
+    - risk free testing
+    - performance optimisation
+    - cost efficiency
+    - handling variability
+
+### Discrete Event Simulation DES:
+
+- method used to model dynamic systems over time
+- characteristics:
+    - dynamic systems
+    - stochastic nature
+    - snapshot-based evolution
+- analyze and optimise complex systems
+- model: abstract representation of the system
+
+### Steps in building a digital twin model:
+
+- data collection
+- model tanslation
+- verification and validation
+- experimental design
+- production runs and analysis
+- documentation of the model
+- implementation of simulation
+
+### System modeling and simulation:
+
+- event scheduling and time advance algorithm: ensure events occus in the correct order
+- Future Event List: efficient event management
+- bootstrapping process: generates a stream of future events based on current time
+
+
+### Stopping condition:
+
+- fixed time intervals
+
+### Input Modeling:
+
+- 
