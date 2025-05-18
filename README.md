@@ -88,6 +88,7 @@
 - Affine space allows for the addition of vectors and points, as well as scalar multiplication of vectors, but not the addition of 2 points directly
 - P = Q + alpha(R - Q)  ->  Q and R = points;   alpha = scalar
 <br>
+
 - Barycentric coorinates:
     - provide a way to express a point T in relation to points P, Q and R in the same plane
     - T(alpha, beta, gamma) = alpahP + betaQ + gammaR
@@ -98,8 +99,10 @@
 - dot product: u.v = |u||v|cos(theta);  theta = angle between u and v vectors
 - if u.v = 0; vectors are orthogonal, right angle between them
 <br>
+
 - cross product: results in a vector that is orthogonal to the plane formed by the original vectors, useful to calculate normals
 <br>
+
 - both products used to analyze forces and motion
 
 ### Homogeneous Coordinates and Transforms:
@@ -112,6 +115,7 @@
 - Rigid body transformations: include rotation and translation, preserve shape and volume of the object, do not alter geometry
 - Non-rigid: scaling, resize the object, can be uniform or non-uniform. Have 6 degrees of freedom, independent scaling factors in different direcections
 <br>
+
 - Shear:
     - shearing tranformations represented by a sheer matrix alter shape of the objects without changing its area
 - Concatenation:
