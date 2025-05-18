@@ -1,7 +1,9 @@
 # DT notes:
 
 Unit 1: https://github.com/Judoca/ESA_prep?tab=readme-ov-file#unit-1 <br>
-Unit 2: https://github.com/Judoca/ESA_prep?tab=readme-ov-file#unit-2
+Unit 2: https://github.com/Judoca/ESA_prep?tab=readme-ov-file#unit-2 <br>
+Unit 3: https://github.com/Judoca/ESA_prep?tab=readme-ov-file#unit-3 <br>
+Unit 4: https://github.com/Judoca/ESA_prep?tab=readme-ov-file#unit-4 <br>
 
 ## Unit 1:
 
@@ -135,3 +137,138 @@ Unit 2: https://github.com/Judoca/ESA_prep?tab=readme-ov-file#unit-2
 
 ## Unit 2:
 
+### Digital Twin
+
+- virtual representations of physical entities - reflect their lifecycle stages (planning, manufacturing, operations and retirement)
+- integrates models, data, connectivity, analysis and actions
+
+### Types of digital twins:
+- categories based on their use cases, complexity and the problems they address
+    - discrete vs composite
+    - product vs facility
+    - simulation vs operational
+    - analytics vs physics based
+
+### Discrete Vs Composite:
+
+- discrete = standalone entities, at the lowest level of abstraction
+- composite = formed by combining multiple discrete twins to create a more complex functional asset
+    - can represent systems of a system posing more complex lifecycle management
+
+### Product Vs Facility:
+
+- product = individually managed products
+    - track product performance post shipping
+    - collects operational data to inform product improvements
+    <br>
+
+- facility = entire manufacturing or production facilities
+    - monitors entire facilities for comprehensive analysis
+    - predicts maintainence and operational efficiencies
+    - supports decision making process by providing real time data analytics
+
+### Simulation Vs Operational:
+
+- simulation = used in design phases
+- operational = manages real time operations
+
+### Analysis Vs Physics:
+
+- Analysis = Utilize historic data and uses AI/ML models in order to make predictions
+- Physics = rely on engineering principles and the laws of physics to simulate real world environments and predict performance
+
+### Characteristics of Digital Twins:
+
+- Physical and virtual entities
+- Twinning rate: the frequency of the synchronisation between the physical and virtual twin, impacting the fidelity of it
+- Bi-directional connection: data flows both ways bewteen the physcial and virtual environment, allowing for real time updates
+
+### Digital Twin achitecture:
+
+- Physical layer: represents the actual physical entity being monitored
+    - sensors and actuators that gather and transmit the data about the physical object
+    - accuracy relies on the quality of the data collected. <br>
+
+- data tranfer and collective layer: responsible for gathering the data from the physical twin
+    - ensures security and complicance with regulations during the transfer process <br>
+
+- data storage and processing layer: stores and processes the collected data for analysis
+    - employs data fusion techniques to combine data to enhance accuracy
+    - supports real time analytics, trend analysis and data visualization to derive insights from the data <br>
+
+- Communication layer:
+    - tranfer data between the sensors and the digital twin, ensuring reliable and secure communication
+    - uses bluetooth, wifi and industrial protocols like OPC UA <br>
+
+- Cloud computing and storage layer:
+    - provides high-performance computing resources necessary for complex simulations and data analytics
+    - offers scalability and elasticity for the digital twins requirements
+
+- Virtual Layer:
+    - contain the digital models and simulations that replicate the physical assets behavior
+    - continuously updated with real time data allowing for predictive analysis and operational optimization
+    - integrates data analysis tools
+
+### Key applications:
+
+- energy sector: simulation of distributed energy resources (DER) to enhance grid management
+- automotive industry: feedback for design improvements and predict maintainence
+- healthcare: improvement treatment efficacy
+
+### Motion tracking and sensor fusion:
+
+- analyze human activities
+- LIDAR and IMU sensor used 
+
+### Technical aspects of digital twin systems:
+
+- skeleton construction
+- real time pose tracking
+
+### Real time pose tracking:
+
+- quaternions for orientation data
+- used for joint rotation -> to ensure it is smooth and continuous
+
+### Position tracking and drift correction:
+
+- drift correction achieved by using detected foot positions of the bone segments, ensuring accuracy over time
+- particle filter used to track position of the legs
+
+### Metrics for evaluation:
+
+- user learnability and system usability
+- task completion time
+- error rate
+
+### Data Sources and models in digital twins:
+
+- temporal or time series: time stamped data
+- master data: slow changing data that describe assets
+- transactional: production and maintainence records
+<br>
+
+- physics-based model
+- analytical models
+- visual models
+
+### Digital thread:
+
+- data aggregator across all lifecycles of the product
+- traceable record for each product assembly and its components capturing all interactions and assembly
+- Digital twins are built on the information provided by the digital thread
+
+### Digital Twin Vs Digital Thread:
+
+- twin: focuses on specific use case
+- thread: comprehensive view across the whole lifecycle
+
+### Stakeholders:
+
+- catgorised into two high level scenarios: asset users and manufacturing assets
+- Original Equipment Manufacturers are increasingly seekign access to real time usage
+- key stakeholders include manufacturers, engineers and data analysts
+
+<hr>
+
+## Unit 3:
